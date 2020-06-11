@@ -12,3 +12,4 @@ jobs:
           host: ${{ secrets.GADI_HOST }}
           username: $${{ secrets.GADI_RBEUCHER }}
           privateKey: ${{ secrets.GADI_PRIVATE_KEY}}
+          passphrase: ${{ secrets.GADI_PRIVATE_KEY_PASSPHRASE}}
