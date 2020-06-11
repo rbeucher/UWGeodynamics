@@ -1,0 +1,14 @@
+name: Build on Gadi
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls -a via ssh
+      uses: garygrossgarten/github-action-ssh@release
+      with:
+        command: ls -a
+        host: ${{ secrets.GADI_HOST }}
+        username: $${{ secrets.GADI_RBEUCHER }}
+        privateKey: ${{ secrets.GADI_PRIVATE_KEY}}
