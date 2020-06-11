@@ -9,7 +9,7 @@ jobs:
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: ls -a
-          host: ${{ secrets.GADI_HOST }}
-          username: $${{ secrets.GADI_RBEUCHER }}
+          host: "gadi.nci.org.au"
+          username: "rb5533"
           privateKey: ${{ secrets.GADI_PRIVATE_KEY}}
           passphrase: ${{ secrets.GADI_PRIVATE_KEY_PASSPHRASE}}
