@@ -87,3 +87,22 @@ def test_shear_band_pure_shear():
 def test_rayleigh_taylor_kekken():
    _notebook_run("examples/2_15_Rayleigh-Taylor_van_Keken_et_al_1997.ipynb")
 
+
+def test_PHYS3070_buoyant_rising_ball():
+   _notebook_run("examples/PHYS3070_Buoyancy_Rising_Ball.ipynb")
+
+
+def test_PHYS3070_buoyant_sinking_ball():
+   _notebook_run("examples/PHYS3070_Buoyancy_Sinking_Ball.ipynb")
+
+
+def test_PHYS3070_buoyant_sinking_ball_nd():
+   _notebook_run("examples/PHYS3070_Buoyancy_Sinking_Ball_non-dimensional.ipynb")
+
+
+def test_PHYS3070_couette_flow():
+   _notebook_run("examples/PHYS3070_Couette_flow.ipynb")
+
+
+def test_PHYS3070_couette_flow_non_linear():
+   _notebook_run("examples/PHYS3070_Couette_flow-non-linear.ipynb")
