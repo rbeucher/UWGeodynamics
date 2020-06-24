@@ -8,7 +8,7 @@ jobs:
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: ls -a
+          command: source /scratch/q97/codes/setup.sh & install_full_stack()
           host: "gadi.nci.org.au"
           username: "rb5533"
           privateKey: ${{ secrets.GADI_PRIVATE_KEY}}
