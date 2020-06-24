@@ -457,9 +457,9 @@ class ViscousCreep(Rheology):
             alpha1 :
             alpha2 :
             epsilon1 :
-                Start of weakening (fraction of accumulated plastic strain)
+                Start of weakening (fraction of accumulated viscous strain)
             epsilon2 :
-                End of weakening (fraction of accumulated plastic strain)
+                End of weakening (fraction of accumulated viscous strain)
 
         Returns
         -------

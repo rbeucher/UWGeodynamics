@@ -2114,7 +2114,7 @@ class _ViscosityFunction():
                 continue
             if material.viscosity:
                 ViscosityHandler = material.viscosity
-                ViscosityHandler.viscousStrain = Model.plasticStrain
+                ViscosityHandler.viscousStrain = Model.viscousStrain
                 ViscosityHandler.pressureField = Model.pressureField
                 ViscosityHandler.strainRateInvariantField = (
                     Model.strainRate_2ndInvariant)
