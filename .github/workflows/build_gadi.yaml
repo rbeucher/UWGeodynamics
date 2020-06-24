@@ -1,14 +1,20 @@
 name: Build on Gadi
-on: [push]
+on: 
+  release:
+      tags:
+          - 'v*.*.*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: ls -a via ssh
+      - uses: actions/checkout@v1
+      - name: Set env
+        run: echo ::set-env name=RELEASE_VERSION::${GITHUB_REF#refs/*/}
+      - name: build UWGeo stack on GADI
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: source /scratch/q97/codes/setup.sh & install_full_stack
+          command: source /scratch/q97/codes/setup.sh & install_full_stack ${{ env.RELEASE_VERSION }}
           host: "gadi.nci.org.au"
           username: "rb5533"
           privateKey: ${{ secrets.GADI_PRIVATE_KEY}}
