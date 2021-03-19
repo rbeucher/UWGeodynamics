@@ -401,6 +401,7 @@ class VelocityBCs(BoundaryConditions):
                     self.Model.velocityField.data[nodes.data, dim] = (
                         obj._get_side_flow())
                     self._add_to_indices(dim, nodes)
+            return
 
         super(VelocityBCs, self)._apply_conditions_nodes(condition, nodes)
 
